@@ -1,7 +1,11 @@
 {% extends 'base.html'%}
 
 {% block title %}Satisfaction Survey{% endblock %}
+
+{% block flash %}{{get_flashed_messages()[0]}}{% endblock %}
+
 {% block header %} Question {{question_num + 1}} {% endblock %}
+
 {% block content %}
   <p>{{question.question}}</p>
   <form action="/answer" method="POST">

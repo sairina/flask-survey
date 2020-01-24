@@ -1,10 +1,11 @@
 {% extends 'base.html'%}
 
 {% block title %}Satisfaction Survey{% endblock %}
+{% block flash %} {% endblock %}
 {% block header %} {{survey.title}} {% endblock %}
 {% block content %}
   <p>{{survey.instructions}}</p>
-  <form action="/questions/0">
+  <form action="#" method="POST">
     <button>Go To Survey!</button>
-  </form>
+  </form> 
 {% endblock %}
